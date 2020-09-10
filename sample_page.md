@@ -1,4 +1,4 @@
-## This can be your internal website page / project page
+## Naver News Article Classification
 
 **Project description:** This project aims to use (Korean) IT news articles in order to classify them further into predefined subcategories. It can be adapted for use with English articles, too.
 ## Modules/packages used: <br>
