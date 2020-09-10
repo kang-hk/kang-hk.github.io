@@ -72,7 +72,7 @@ X_test_tfidf = tfidf_vect.transform(X_test)
 SVM = svm.SVC(C=1.0, kernel='linear', degree=3, gamma='auto')
 SVM.fit(X_train_tfidf,y_train) # predict the labels on validation dataset
 predictions_SVM = SVM.predict(X_test_tfidf) # Use accuracy_score function to get the accuracy
-print("SVM Accuracy Score: ",accuracy_score(predictions_SVM, y_test)*100)
+print("SVM Accuracy Score: ",accuracy_score(predictions_SVM, y_test))
 ```
 
 ### 4. Results
