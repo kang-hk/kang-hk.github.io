@@ -1,6 +1,6 @@
 ## Naver News Article Classification
 
-This project aims scrapes Korean IT news articles from Naver in order to classify them into predefined subcategories. It can be adapted for use with English articles, too. Code blocks below are snippets; full implementation is available on my GitHub.
+While interning at a small data science startup in Seoul, as part of the internship program, I was assigned to deliver an independent project of my choosing that utilized machine learning techniques. In this project, I scraped Korean IT news articles from Naver in order to classify them into predefined subcategories. It can be adapted for use with English articles, too. Code blocks below are snippets; full implementation is available on my GitHub.
 ## Modules/packages used: <br>
 Pandas <br> Requests <br> Beautiful Soup <br> Scikit-learn <br> KoNLPy
 
