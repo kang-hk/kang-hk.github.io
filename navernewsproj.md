@@ -29,7 +29,7 @@ if unwanted_element != None:
 
 ### 2. Data Cleanup and Tokenization
 
-Eventually, I had amassed 36,410 rows of data. <br>
+Eventually, I had amassed 36,410 rows of data. Pictured below are articles in the "General Science" category. At a (very, very rough) glance, the last two articles are about nuclear fission technology and elephants, respectively. <br>
 <img src="images/naverdata.png?raw=true"/>
 <br> <br>
 
