@@ -29,7 +29,7 @@ if unwanted_element != None:
 
 ### 2. Data Cleanup and Tokenization
 
-Eventually, I had amassed 36,410 rows of data. 
+Eventually, I had amassed 36,410 rows of data. <br>
 <img src="images/naverdata.png?raw=true"/>
 <br> <br>
 
@@ -46,13 +46,36 @@ The raw text had lots of unhelpful bits and pieces, including filler words (the 
 
 ### 3. Dataset Training
 
-```javascript
-if (isAwesome){
-  return true
-}
+I decided to try the Naive-Bayes and Support Vector Machine (SVM) classification methods to see how I fared.
+
+```python
+#Naive-Bayes
+naive_bayes = MultinomialNB()
+naive_bayes.fit(X_train_tfidf,y_train)
+predictions = naive_bayes.predict(X_test_tfidf)
+print("\nNaive-Bayes Scores:")
+print("Accuracy: ", accuracy_score(y_test, predictions))
+print("Recall: ", recall_score(y_test, predictions, average = 'weighted'))
+print("Precision: ", precision_score(y_test, predictions, average = 'weighted'))
+print("F1 score: ", f1_score(y_test, predictions, average = 'weighted'))
+```
+
+```python
+#SVM
+encoder = LabelEncoder()
+y_train = encoder.fit_transform(y_train)
+y_test = encoder.fit_transform(y_test)
+tfidf_vect = TfidfVectorizer(max_features=5000)
+tfidf_vect.fit(final_data['text'])
+X_train_tfidf = tfidf_vect.transform(X_train)
+X_test_tfidf = tfidf_vect.transform(X_test)
+SVM = svm.SVC(C=1.0, kernel='linear', degree=3, gamma='auto')
+SVM.fit(X_train_tfidf,y_train) # predict the labels on validation dataset
+predictions_SVM = SVM.predict(X_test_tfidf) # Use accuracy_score function to get the accuracy
+print("SVM Accuracy Score: ",accuracy_score(predictions_SVM, y_test)*100)
 ```
 
 ### 4. Results
 
-<img src="images/dummy_thumbnail.jpg?raw=true"/>
+<img src="images/naverresults.png?raw=true"/>
 
