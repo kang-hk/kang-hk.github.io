@@ -80,4 +80,5 @@ print("SVM Accuracy Score: ",accuracy_score(predictions_SVM, y_test))
 <img src="images/finalresultsnaver.png?raw=true"/>
 
 I found that the SVM classifier performed better than the Naive-Bayes classifier did. The accuracy scores were remarkable, considering the complexity of the Korean written language and possible overlaps between articles that could have been classified, for example, under both "Mobile" and "Social Networks".
-
+<br>
+This was my first exposure to machine learning (it was the summer before my sophomore year of college) and opened my eyes to possibilities of achieving near-perfect accuracy scores if I were able to run the code faster with a better machine (instead of my late-2013 MacBook Pro Retina) and optimize the collection process further. I am considering redoing this project on Google Colab for better results in the future.
