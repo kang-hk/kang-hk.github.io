@@ -29,10 +29,9 @@ if unwanted_element != None:
 
 ### 2. Data Cleanup and Tokenization
 
-Eventually, I had amassed 36,410 rows of data. Pictured below are articles in the "General Science" category. At a (very, very rough) glance, the last two articles are about nuclear fission technology and elephants, respectively. <br>
+Eventually, I had amassed 36,410 rows of data. Pictured below are articles in the "General Science" category. At a (very, very rough) glance, the last two articles are about nuclear fission technology and elephants, respectively. <br> <br>
 <img src="images/naverdata.png?raw=true"/>
 <br> <br>
-
 The raw text had lots of unhelpful bits and pieces, including filler words (the closest English equivalents I can think of are "very", "of", "for", etc.) that did not add much value in conveying the overall message of the article. Furthermore, the Korean language is quite difficult to approach from an NLP perspective as words like "candy" (사탕) can be separated into "four" (사) and "soup" (탕). "Four soup" was less useful in my data than "candy" was, and I needed a way to make sure phrases weren't separated into meaninglessness. <a href="https://konlpy.org/en/latest/"> KoNLPy</a> is an NLP package  built specifically for the Korean language. I used MeCab-ko, its Korean morphological analyzer and part-of-speech tagger, to eliminate certain phrases and to make sure significant words and certain morphemes were not tokenized further into less significant morphemes.
   
 ```python
