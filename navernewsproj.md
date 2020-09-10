@@ -76,7 +76,7 @@ print("SVM Accuracy Score: ",accuracy_score(predictions_SVM, y_test))
 
 ### 4. Results
 
-<img src="images/finalresultsnaver.png?raw=true"/>
+<img src="images/naverres.png?raw=true"/>
 
 I found that the SVM classifier performed better than the Naive-Bayes classifier did. The accuracy scores were remarkable, considering the complexity of the Korean written language and possible overlaps between articles that could have been classified, for example, under both "Mobile" and "Social Networks".
 <br>
