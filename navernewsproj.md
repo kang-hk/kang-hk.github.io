@@ -33,7 +33,7 @@ Eventually, I had amassed 36,410 rows of data. <br>
 <img src="images/naverdata.png?raw=true"/>
 <br> <br>
 
-The raw text had lots of unhelpful bits and pieces, including filler words (the closest English equivalents I can think of are "very", "of", "for", etc.) that did not add much value in conveying the overall message of the article. Furthermore, the Korean language is quite difficult to approach from an NLP perspective as words like "candy" (사탕) can be separated into "four" (사) and "soup" (탕). "Four soup" was less useful in my data than "candy" was, and I needed a way to make sure phrases weren't separated into meaninglessness. <a href="https://konlpy.org/en/latest/"> KoNLPy</a> is an NLP package  built specifically for the Korean language. I used MeCab-ko, its Korean morphological analyzer and part-of-speech tagger, to eliminate certain phrases and to make sure significant words and certain morphemes were not separated further into less significant morphemes.
+The raw text had lots of unhelpful bits and pieces, including filler words (the closest English equivalents I can think of are "very", "of", "for", etc.) that did not add much value in conveying the overall message of the article. Furthermore, the Korean language is quite difficult to approach from an NLP perspective as words like "candy" (사탕) can be separated into "four" (사) and "soup" (탕). "Four soup" was less useful in my data than "candy" was, and I needed a way to make sure phrases weren't separated into meaninglessness. <a href="https://konlpy.org/en/latest/"> KoNLPy</a> is an NLP package  built specifically for the Korean language. I used MeCab-ko, its Korean morphological analyzer and part-of-speech tagger, to eliminate certain phrases and to make sure significant words and certain morphemes were not tokenized further into less significant morphemes.
   
 ```python
  for main_index in range(len(main_data)): #run through each item in main_data
@@ -77,5 +77,7 @@ print("SVM Accuracy Score: ",accuracy_score(predictions_SVM, y_test))
 
 ### 4. Results
 
-<img src="images/naverresults.png?raw=true"/>
+<img src="images/finalresultsnaver.png?raw=true"/>
+
+I found that the SVM classifier performed better than the Naive-Bayes classifier did. The accuracy scores were remarkable, considering the complexity of the Korean written language and possible overlaps between articles that could have been classified, for example, under both "Mobile" and "Social Networks".
 
